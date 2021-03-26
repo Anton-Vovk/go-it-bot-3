@@ -77,7 +77,7 @@ const credentials = {
 //   return propCount;
 // }
 
-console.log(countProps({ name: "Mango", age: 2 })); //2
+// console.log(countProps({ name: "Mango", age: 2 })); //2
 
 // ----------------------------13---------------------
 // const apartment = {
@@ -124,19 +124,19 @@ function countTotalSalary(salaries) {
 console.log(countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 })); //400
 
 // ----------------------------17---------------------
-const colors = [
-  { hex: "#f44336", rgb: "244,67,54" },
-  { hex: "#2196f3", rgb: "33,150,243" },
-  { hex: "#4caf50", rgb: "76,175,80" },
-  { hex: "#ffeb3b", rgb: "255,235,59" },
-];
-const hexColors = [];
-const rgbColors = [];
+// const colors = [
+//   { hex: "#f44336", rgb: "244,67,54" },
+//   { hex: "#2196f3", rgb: "33,150,243" },
+//   { hex: "#4caf50", rgb: "76,175,80" },
+//   { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
+// const hexColors = [];
+// const rgbColors = [];
 
-for (const color of colors) {
-  hexColors.push(color.hex);
-  rgbColors.push(color.rgb);
-}
+// for (const color of colors) {
+//   hexColors.push(color.hex);
+//   rgbColors.push(color.rgb);
+// }
 
 // ----------------------------18---------------------
 // const products = [
@@ -184,7 +184,53 @@ function calculateTotalPrice(productName) {
       return product.quantity * product.price;
     }
   }
-  return 0;
+
+  return console.log("Товар отсутствует");
 }
 
-// ----------------------------21---------------------
+// ----------------------------21-22---------------------
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+// const {yesterday, today, tomorrow } = highTemperatures;
+
+// const meanTemperature = (yesterday + today + tomorrow) / 3;
+
+// ----------------------------23---------------------
+const highTemperatures = {
+  yesterday: 28,
+  today: 26,
+  tomorrow: 33,
+};
+
+const {
+  yesterday: highYesterday,
+  today: highToday,
+  tomorrow: highTomorrow,
+  icon: highIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg",
+} = highTemperatures;
+
+const meanTemperature = (highYesterday + highToday + highTomorrow) / 3;
+
+console.log(meanTemperature);
+
+// ----------------------------24---------------------
+const colors = [
+  { hex: "#f44336", rgb: "244,67,54" },
+  { hex: "#2196f3", rgb: "33,150,243" },
+  { hex: "#4caf50", rgb: "76,175,80" },
+  { hex: "#ffeb3b", rgb: "255,235,59" },
+];
+
+const hexColors = [];
+const rgbColors = [];
+for (const { hex, rgb } of colors) {
+  hexColors.push(hex);
+  rgbColors.push(rgb);
+}
+console.log(rgbColors);
+console.log(hexColors);
+
+// ----------------------------25---------------------
